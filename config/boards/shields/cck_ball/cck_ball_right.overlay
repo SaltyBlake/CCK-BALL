@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
  
-#include "cck_ball.dtsi"
+#include "cck_ball.dtsi" 
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
 
