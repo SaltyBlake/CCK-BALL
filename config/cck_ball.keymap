@@ -7,9 +7,21 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <input/processors.dtsi>
 
+/ {
+    input_processors {
+        my_scroll_scaler: my_scroll_scaler {
+            compatible = "zmk,input-processor-scaler";
+            #input-processor-cells = <2>;
+            type = <INPUT_EV_REL>;
+            codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
+            track-remainders;
+        };
+    };
+};
+
 // Helper for the trackball sensitivity
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
-&msc_input_listener { input-processors = <&zip_scroll_scaler 1 1>; };
+&msc_input_listener { input-processors = <&zip_scroll_scaler 1 6>; };
 
 / {
     behaviors {
