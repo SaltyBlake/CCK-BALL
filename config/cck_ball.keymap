@@ -53,7 +53,7 @@
 &kp LCTRL  &kp LGUI  &kp LALT  &kp DEL   &kp SPACE &mo 1     &mo 2     &kp SPACE &kp ENTER &kp LEFT  &kp DOWN  &kp RIGHT
             >;
             // Right side encoder defaults to Vol, Left to Mouse Scroll
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_vert>;
+            ssensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>, <&scroll_vert>;
         };
 
         lower_layer {
@@ -64,7 +64,7 @@
 &trans   &trans  &trans  &trans  &trans  &none   &none      &none      &trans  &trans  &none    &trans
 &trans   &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans   &trans
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_vert>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>, <&scroll_vert>;
         };
 
         raise_layer {
@@ -86,7 +86,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_vert>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>, <&scroll_vert>;
         };
 
         snipe_layer {
@@ -98,7 +98,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
             // This activates your custom CAD scrolling logic when on Layer 4
-            sensor-bindings = <&scroll_vert &scroll_horiz>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>, <&scroll_vert>;
         };
     };
 };
