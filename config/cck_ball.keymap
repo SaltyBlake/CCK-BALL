@@ -20,7 +20,7 @@
 };
 
 // Helper for the trackball sensitivity
-&mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
+&mmv_input_listener { input-processors = <&zip_xy_scaler 1 4>; };
 &msc_input_listener { input-processors = <&zip_scroll_scaler 1 6>; };
 
 / {
@@ -53,7 +53,7 @@
 &kp LCTRL  &kp LGUI  &kp LALT  &kp DEL   &kp SPACE &mo 1     &mo 2     &kp SPACE &kp ENTER &kp LEFT  &kp DOWN  &kp RIGHT
             >;
             // Right side encoder defaults to Vol, Left to Mouse Scroll
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>, <&scroll_vert>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>, <&inc_dec_kp UP DOWN>;
         };
 
         lower_layer {
