@@ -1,5 +1,5 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1000
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 12
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 3
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -18,14 +18,14 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-            tap-ms = <30>;
+            tap-ms = <0>;
         };
         // Custom behavior for Horizontal Scrolling (Encoder 2)
         scroll_horiz: scroll_horizontal {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
-            tap-ms = <30>;
+            tap-ms = <0>;
         };
     };
 
