@@ -21,7 +21,7 @@
 
 // Helper for the trackball sensitivity
 &mmv_input_listener { input-processors = <&zip_xy_scaler 1 4>; };
-&msc_input_listener { input-processors = <&zip_scroll_scaler 1 6>; };
+&msc_input_listener { input-processors = <&zip_scroll_scaler 1 8>; };
 
 / {
     behaviors {
