@@ -7,9 +7,14 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <input/processors.dtsi>
 
-// Helper for the trackball sensitivity
-&mmv_input_listener { input-processors = <&zip_xy_scaler 1 8>; };
-&msc_input_listener {input-processors = <&zip_xy_scaler 1 1>;
+// This handles the trackball (XY movement)
+&mmv_input_listener { 
+    input-processors = <&zip_xy_scaler 1 8>; 
+};
+
+// This handles the encoder (Scroll wheel)
+&msc_input_listener {
+    input-processors = <&zip_scroll_scaler 1 1>; 
 };
 
 &msc {
@@ -23,14 +28,14 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-            tap-ms = <0>;
+            tap-ms = <20>;
         };
 
         scroll_horiz: scroll_horizontal {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
-            tap-ms = <0>;
+            tap-ms = <20>;
         };
     };
 
