@@ -9,7 +9,8 @@
 
 // Helper for the trackball sensitivity
 &mmv_input_listener { input-processors = <&zip_xy_scaler 1 8>; };
-&msc_input_listener {};
+&msc_input_listener {input-processors = <&zip_xy_scaler 1 1>;
+};
 
 &msc {
     time-to-max-speed-ms = <0>;
