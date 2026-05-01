@@ -14,7 +14,8 @@
 
 // This handles the encoder (Scroll wheel)
 &msc_input_listener {
-    input-processors = <&zip_scroll_scaler 1 1>; 
+    status = "okay";
+    input-processors = <&zip_scroll_scaler 1 10>;
 };
 
 &msc {
