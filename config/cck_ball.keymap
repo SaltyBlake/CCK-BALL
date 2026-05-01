@@ -1,5 +1,5 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 500
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 1
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -13,10 +13,12 @@
 };
 
 // This handles the encoder (Scroll wheel)
-&msc_input_listener {
-    status = "okay";
+/*
+ &msc_input_listener {
+   status = "okay";
     input-processors = <&zip_scroll_scaler 1 10>;
 };
+*/
 
 &msc {
     time-to-max-speed-ms = <0>;
